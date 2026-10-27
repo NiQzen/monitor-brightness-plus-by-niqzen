@@ -4,6 +4,20 @@ Control the brightness of your external monitors (DDC/CI) and Windows **Night Li
 
 **No Stream Deck + required:** the Brightness and Night Light actions work on every Stream Deck model with keys. On a Stream Deck + you can also use the dials and the touch strip.
 
+## Setup
+1. **Turn on DDC/CI on your monitor.** Open the monitor's on-screen menu with its buttons and enable the option called **DDC/CI** (often under *Setup*, *System* or *Others*). Many monitors have it on by default.
+2. **Install the plugin** from the Elgato Marketplace. It appears in the Stream Deck app under **Monitor Brightness Plus**.
+3. **Add Brightness:** drag the **Brightness** action onto a key or, on a Stream Deck +, onto a dial.
+4. **Pick the monitor:** in the action's settings, leave **Monitor #** at `0` to control all monitors together, or enter `1`, `2`, … to control one monitor. With several monitors, add one action per monitor.
+5. **Choose what a key does** (keys only): in **Key action**, keep *Press: 100 % · Hold: 0 %* or pick increase, decrease, a fixed level, or a list of levels.
+6. **Add Night Light (optional):** drag the **Night Light** action onto a key or a dial. On a key, choose *Toggle*, *Turn on* or *Turn off*.
+
+**If the action shows a warning triangle**, the monitor did not answer:
+- check that DDC/CI is on in the monitor's menu,
+- connect the monitor directly (DisplayPort or HDMI); some docks and adapters do not pass DDC/CI through,
+- turn off dynamic contrast, eco or HDR picture modes, which can lock brightness,
+- check the **Monitor #** setting.
+
 ## Brightness – on a dial or a key
 The same **Brightness** action works on a dial and on a key.
 

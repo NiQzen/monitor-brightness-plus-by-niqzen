@@ -2,6 +2,8 @@
 
 Control the brightness of your external monitors (DDC/CI) and Windows **Night Light** from Stream Deck keys and the dials of **Stream Deck +**.
 
+**No Stream Deck + required:** the Brightness and Night Light actions work on every Stream Deck model with keys. On a Stream Deck + you can also use the dials and the touch strip.
+
 ## Brightness – on a dial or a key
 The same **Brightness** action works on a dial and on a key.
 

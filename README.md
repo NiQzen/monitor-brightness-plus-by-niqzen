@@ -1,81 +1,52 @@
 # Monitor Brightness Plus for Stream Deck
 
-Control the brightness of your external monitors (DDC/CI) and Windows **Night Light** from Stream Deck keys and the dials of **Stream Deck +**.
+Control the brightness of your external monitors (DDC/CI) and Windows Night Light right from your Stream Deck.
 
-**No Stream Deck + required:** the Brightness and Night Light actions work on every Stream Deck model with keys. On a Stream Deck + you can also use the dials and the touch strip.
+Works on every Stream Deck model with keys. On a Stream Deck +, you can also use the dials and the touch strip.
 
-## Setup
-1. **Turn on DDC/CI on your monitor.** Open the monitor's on-screen menu with its buttons and enable the option called **DDC/CI** (often under *Setup*, *System* or *Others*). Many monitors have it on by default.
-2. **Install the plugin** from the Elgato Marketplace. It appears in the Stream Deck app under **Monitor Brightness Plus**.
-3. **Add Brightness:** drag the **Brightness** action onto a key or, on a Stream Deck +, onto a dial.
-4. **Pick the monitor:** in the action's settings, leave **Monitor #** at `0` to control all monitors together, or enter `1`, `2`, … to control one monitor. With several monitors, add one action per monitor.
-5. **Choose what a key does** (keys only): in **Key action**, keep *Press: 100 % · Hold: 0 %* or pick increase, decrease, a fixed level, or a list of levels.
-6. **Add Night Light (optional):** drag the **Night Light** action onto a key or a dial. On a key, choose *Toggle*, *Turn on* or *Turn off*. To switch it automatically, turn on **Schedule** in its settings.
+## Brightness on a dial (Stream Deck +)
+- **Rotate:** adjust brightness by a configurable step (1–25%)
+- **Press or tap:** 100%
+- **Hold or long-tap:** 0%
 
-**If the action shows a warning triangle**, the monitor did not answer:
-- check that DDC/CI is on in the monitor's menu,
-- connect the monitor directly (DisplayPort or HDMI); some docks and adapters do not pass DDC/CI through,
-- turn off dynamic contrast, eco or HDR picture modes, which can lock brightness,
-- check the **Monitor #** setting.
-
-## Brightness – on a dial or a key
-The same **Brightness** action works on a dial and on a key.
-
-**On a dial**
-
-| Control | Action |
-|---|---|
-| Rotate dial | Change brightness by the configured step (1–25 %) |
-| Press dial / tap touch strip | Set brightness to 100 % |
-| Hold dial / long-tap touch strip | Set brightness to 0 % |
-
-**On a key** – choose what the key does in its settings:
-
-| Key action | What it does |
-|---|---|
-| Press: 100 % · Hold: 0 % (default) | Same as pressing the dial |
-| Increase / Decrease brightness | One step per press; hold the key to keep changing |
-| Set to a level | Sets a fixed level, e.g. 70 % |
-| Cycle through levels | Moves through a list such as `100, 50, 0` |
+## Brightness on a key
+Choose what each key does:
+- **Press: 100% · Hold: 0%**
+- **Increase or decrease brightness** (hold the key to keep changing)
+- **Set a fixed level**, e.g. 70%
+- **Cycle through levels**, e.g. `100, 50, 0`
 
 The key can show the current brightness as its title.
 
-## Night Light – on a dial or a key
+## Night Light
+- **On a key:** toggle, turn on or turn off Windows Night Light
+- **On a dial:** rotate to change its strength, press or tap to turn it on or off
+- **Schedule:** turn Night Light on and off at set times, e.g. on at 21:00 and off at 07:00. It follows the Windows clock, and you can still switch it by hand in between.
 
-| Control | Action |
-|---|---|
-| Key | Toggle, turn on, or turn off Night Light (choose in the key's settings) |
-| Rotate dial | Change Night Light strength (1–25 % per click) |
-| Press dial / tap touch strip | Turn Night Light on or off |
-
-**Schedule:** in the settings of any Night Light key or dial, turn on **Schedule** and pick when Night Light turns on and off, for example on at 21:00 and off at 07:00. The schedule follows the Windows clock and is shared by all Night Light keys and dials. Night Light switches only at those times, so you can still change it by hand in between. If the PC was asleep or Stream Deck was closed at a switch time, Night Light is set to match the schedule when it wakes or starts. If Night Light is also scheduled in Windows Settings, turn that schedule off so the two don't conflict.
-
-The key icon and the touch strip show whether Night Light is on, also when it is changed in Windows Settings (they update within about 5 seconds).
-
-> **Note:** a few seconds after the strength changes, Windows re-applies the display colours once. This can show as a brief flicker, mostly on dark or video content. Windows does the same with its own Night Light slider, so this is expected and not a plugin error.
+The key and the touch strip show whether Night Light is on, also when it is changed in Windows.
 
 ## Settings
-**Brightness**
-- **Title** – label shown on the touch strip (dial)
-- **Dial step / Step** – percentage per dial click or key press
-- **Monitor #** – `0` = all DDC/CI monitors, `1`, `2`, … = a single monitor
-- **Hold time** – how long to hold before brightness goes to 0 %
-- **Key action**, **Level**, **Levels**, **Show level** – key only
+- **Monitor #:** `0` controls all DDC/CI monitors together; enter `1`, `2`, … to control one monitor. With several monitors, add one action per monitor.
+- **Key action**, **Level**, **Levels**, **Show level** (brightness key)
+- **Step / Dial step:** percentage per key press or dial click
+- **Hold time:** how long to hold before brightness goes to 0%
+- **Schedule**, **Turn on at**, **Turn off at** (Night Light, shared by all Night Light keys and dials)
 
-**Night Light**
-- **Action** – toggle, turn on or turn off (key)
-- **Title** and **Dial step** (dial)
-- **Schedule**, **Turn on at**, **Turn off at** – automatic on/off times, shared by all Night Light actions
+## Setup
+1. Turn on **DDC/CI** in your monitor's on-screen menu (often under *Setup*, *System* or *Others*). Many monitors have it on by default.
+2. Drag the **Brightness** action onto a key or a dial, pick the monitor, and on a key choose what it does.
+3. Optional: drag the **Night Light** action onto a key or a dial. To switch it automatically, turn on **Schedule** in its settings.
+
+If the action shows a warning triangle, the monitor did not answer. Check that DDC/CI is on, connect the monitor directly (some docks and adapters don't pass DDC/CI through), and turn off dynamic contrast, eco or HDR picture modes, which can lock brightness.
+
+If Night Light is also scheduled in Windows Settings, turn that schedule off so the two don't conflict.
+
+> **Note:** a few seconds after the Night Light strength changes, Windows re-applies the display colours once. This can show as a brief flicker. Windows' own Night Light slider does the same, so it is expected.
 
 ## Requirements
 - Windows 10 / 11, Stream Deck 6.9 or later
-- Key actions work on every Stream Deck with keys; dial features need a Stream Deck +
-- For brightness: an external monitor with **DDC/CI enabled** in its on-screen menu. Some docks/adapters do not pass DDC/CI through. Features such as dynamic contrast / HDR modes can lock brightness. Built-in laptop displays are not supported.
-
-## How it works
-Brightness: the plugin talks to the monitor through the Windows High-Level Monitor Configuration API (`dxva2.dll`) using a small PowerShell helper.
-
-Night Light: Windows has no public API for it, so the plugin reads and writes the same Night Light settings that Windows Settings uses, in the current user's registry. No administrator rights are needed.
+- For brightness: an external monitor with DDC/CI enabled. Built-in laptop displays are not supported.
+- Night Light needs no administrator rights.
 
 No data leaves your computer.
 
@@ -88,7 +59,7 @@ No data leaves your computer.
 - A switch missed while the PC was asleep or Stream Deck was closed is applied when it wakes or starts.
 
 ### 1.0.0
-- First release: monitor brightness on Stream Deck + dials and on keys (press for 100 % / hold for 0 %, increase, decrease, set a level, cycle through levels), and Windows Night Light on keys and dials.
+- First release: monitor brightness on Stream Deck + dials and on keys (press for 100% / hold for 0%, increase, decrease, set a level, cycle through levels), and Windows Night Light on keys and dials.
 
 ## Support
 Open an issue on this page.
